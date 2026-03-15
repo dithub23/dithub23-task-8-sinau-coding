@@ -25,7 +25,6 @@ export const CartProvider = ({ children }) => {
     setCartItems((prev) => prev.filter((_, i) => i !== index));
   };
 
-  // FUNGSI BARU: Mengosongkan keranjang
   const clearCart = () => {
     setCartItems([]);
   };
@@ -41,7 +40,7 @@ export const CartProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
-        clearCart, // Expose fungsi clearCart
+        clearCart,
         totalPrice,
         isDark,
         toggleTheme,

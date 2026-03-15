@@ -7,7 +7,7 @@ import { useCart } from "../context/CartContext";
 
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { isDark } = useCart(); // Ambil dari context
+  const { isDark } = useCart();
 
   useEffect(() => {
     const loggedIn = localStorage.getItem("isLoggedIn");

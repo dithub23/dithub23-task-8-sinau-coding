@@ -14,17 +14,15 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // 1. Cari data spesifik berdasarkan email yang diinput
+    // 1.
     const savedPassword = localStorage.getItem(`${email}_password`);
     const savedName = localStorage.getItem(`${email}_name`);
-    const savedAvatar = localStorage.getItem(`${email}_avatar`); // Mengambil avatar unik user
-
+    const savedAvatar = localStorage.getItem(`${email}_avatar`);
     if (savedPassword && password === savedPassword) {
-      // 2. Set Session login umum
+      // 2.
       localStorage.setItem("isLoggedIn", "true");
-      localStorage.setItem("currentUserEmail", email); // Identitas utama sesi ini
-
-      // 3. Set data display untuk Navbar (agar langsung sinkron)
+      localStorage.setItem("currentUserEmail", email);
+      // 3.
       localStorage.setItem("userName", savedName || "User");
       localStorage.setItem("userAvatar", savedAvatar || "");
 

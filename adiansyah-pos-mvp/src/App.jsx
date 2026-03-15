@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Payment from "./pages/Payment";
-import Profile from "./pages/Profile"; // HARUS ADA IMPORT INI
+import Profile from "./pages/Profile";
 import WhatsappPopUp from "./components/WhatsappPopUp";
 
 export default function App() {

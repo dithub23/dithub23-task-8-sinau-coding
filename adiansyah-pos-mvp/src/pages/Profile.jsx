@@ -5,9 +5,8 @@ import { useCart } from "../context/CartContext";
 export default function Profile() {
   const { isDark } = useCart();
   const navigate = useNavigate();
-  const email = localStorage.getItem("currentUserEmail"); // Siapa yang login?
+  const email = localStorage.getItem("currentUserEmail");
 
-  // Gunakan kunci unik: email + _key
   const [user, setUser] = useState({
     userName: localStorage.getItem(`${email}_name`) || "User",
     phone: localStorage.getItem(`${email}_phone`) || "",
@@ -31,7 +30,6 @@ export default function Profile() {
     localStorage.setItem(`${email}_address`, user.address);
     localStorage.setItem(`${email}_avatar`, user.avatar);
 
-    // Update juga session saat ini agar Navbar berubah
     localStorage.setItem("userName", user.userName);
     localStorage.setItem("userAvatar", user.avatar);
 

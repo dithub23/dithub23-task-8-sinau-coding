@@ -24,10 +24,9 @@ export default function Register() {
       return;
     }
 
-    // Simpan Database User (Gunakan Email sebagai prefix agar unik)
     localStorage.setItem(`${email}_name`, name);
     localStorage.setItem(`${email}_password`, password);
-    // Simpan list email untuk validasi login (opsional tapi membantu)
+
     localStorage.setItem("userEmail", email);
 
     alert("Registrasi Berhasil! Silakan Login.");

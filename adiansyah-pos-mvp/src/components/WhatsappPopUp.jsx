@@ -10,7 +10,7 @@ export default function WhatsappPopUp() {
 
   return (
     <div className="fixed bottom-8 right-8 z-[999] flex flex-col gap-4">
-      {/* Tombol Theme Toggle (Di atas WA) */}
+      {/* Tombol Theme Toggle */}
       <motion.button
         onClick={toggleTheme}
         initial={{ scale: 0 }}

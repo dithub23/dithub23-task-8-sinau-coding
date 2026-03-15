@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Payment() {
-  const { totalPrice, isDark, clearCart } = useCart(); // Ambil clearCart di sini
+  const { totalPrice, isDark, clearCart } = useCart();
   const navigate = useNavigate();
   const [selectedMethod, setSelectedMethod] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -149,7 +149,7 @@ export default function Payment() {
                   alert(
                     "Konfirmasi diterima! Pesanan Anda akan segera diproses.",
                   );
-                  clearCart(); // FUNGSI INI DIJALANKAN
+                  clearCart();
                   navigate("/dashboard");
                 }}
                 className="w-full bg-orange-500 text-white py-3 rounded-xl font-bold hover:bg-orange-600 shadow-lg"

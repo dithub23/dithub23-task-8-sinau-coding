@@ -10,7 +10,6 @@ export default function Navbar() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
   const currentUserEmail = localStorage.getItem("currentUserEmail");
 
-  // Ambil data spesifik user yang login berdasarkan email
   const userName = isLoggedIn
     ? localStorage.getItem(`${currentUserEmail}_name`) ||
       localStorage.getItem("userName") ||
